@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 65%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 65%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 65%;
+
+    --primary: 0 0% 21%;
+    --primary-foreground: 0 0% 65%;
+
+    --secondary: 0 0% 42%;
+    --secondary-foreground: 0 0% 65%;
+
+    --muted: 0 0% 21%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 0 0% 42%;
+    --accent-foreground: 0 0% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 21%;
+    --input: 0 0% 21%;
+    --ring: 0 0% 42%;
+
+    --radius: 1.125rem;
+
+    --lab-black: 0 0% 5%;
+    --ritual-gray: 0 0% 42%;
+    --granite-text: 0 0% 65%;
+    --granite-button: 0 0% 21%;
+    --button-shadow: 0 0% 76%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 0 0% 21%;
+    --sidebar-primary-foreground: 0 0% 65%;
+    --sidebar-accent: 0 0% 21%;
+    --sidebar-accent-foreground: 0 0% 65%;
+    --sidebar-border: 0 0% 21%;
+    --sidebar-ring: 0 0% 42%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 65%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 65%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 65%;
+
+    --primary: 0 0% 21%;
+    --primary-foreground: 0 0% 65%;
+
+    --secondary: 0 0% 42%;
+    --secondary-foreground: 0 0% 65%;
+
+    --muted: 0 0% 21%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 0 0% 42%;
+    --accent-foreground: 0 0% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 21%;
+    --input: 0 0% 21%;
+    --ring: 0 0% 42%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 0 0% 21%;
+    --sidebar-primary-foreground: 0 0% 65%;
+    --sidebar-accent: 0 0% 21%;
+    --sidebar-accent-foreground: 0 0% 65%;
+    --sidebar-border: 0 0% 21%;
+    --sidebar-ring: 0 0% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  button {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@layer utilities {
+  .text-engraved {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .button-emboss {
+    box-shadow: 0 1.5px 3px hsl(var(--button-shadow));
+  }
+
+  .button-emboss:hover {
+    box-shadow: 0 2px 4px hsl(var(--ritual-gray));
+  }
+
+  .button-emboss:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}

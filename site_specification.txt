@@ -1,0 +1,364 @@
+═══════════════════════════════════════════════════════════════
+🧪 ECHOLAB™ — SSD CLEANSING INTERFACE SPECIFICATION
+═══════════════════════════════════════════════════════════════
+
+"No trace. No return. Just liquidity."
+
+-------------------------------------------------------------------
+1. EXECUTIVE MANDATE
+-------------------------------------------------------------------
+
+EchoLAB™ is a high-value, mobile-first web application designed to
+deliver a killer UI/UX experience that captivates visitors for a 
+minimum of 20 minutes.
+
+This is NOT a generic SSD site. It is a digital laboratory for 
+black note cleansing and transmutation.
+
+Core Features:
+✓ Fiat + crypto payout logic
+✓ Encrypted form flows
+✓ Lab-grade visual conviction
+✓ Multi-page architecture (no single-page stacking)
+✓ Automatic scroll-to-top on navigation
+✓ Sovereign-grade design system
+
+-------------------------------------------------------------------
+2. SSD CLEANSING FLOW ARCHITECTURE
+-------------------------------------------------------------------
+
+🔐 CLIENT REGISTRATION PORTAL
+Fields:
+- Full Name (client/company name)
+- Email Address
+- Phone Number (for encrypted SMS updates)
+- Package ID (serial on black note bundle)
+- Estimated Total Value
+- Preferred Payout Method:
+  • Bank Transfer (IBAN, SWIFT, Account Name)
+  • Crypto Wallet (BTC, ETH, USDT, etc.)
+
+Terms:
+- $250 upfront processing fee
+- 19% cleansing fee deducted post-transmutation
+- 81% net payout to client
+
+📦 PACKAGE SUBMISSION & TRANSFER PROTOCOL
+Transfer Methods:
+- Secure drop node
+- Encrypted courier pickup
+- Blind handoff (no names, no signatures)
+
+RTC Code Generation:
+- Based on package serial hash
+- Sent via encrypted SMS to client's phone
+
+📲 CLIENT ALERT SYSTEM
+Triggered by phone number input:
+- Package received confirmation
+- RTC tracking code
+- Estimated completion time (72 hours)
+- Real-time SMS updates
+
+🔐 ADMIN ALERT (Backend)
+- Anonymous notification system
+- Not published or exposed on frontend
+- Secure backend-only alerts
+
+-------------------------------------------------------------------
+3. UI/UX SPECIFICATION — SSD LAB EDITION
+-------------------------------------------------------------------
+
+🧪 THEME: SOVEREIGN-GRADE MYSTIQUE
+
+Color Palette (HSL):
+• Background: hsl(0, 0%, 5%)    [Deep Lab Black]
+• Accent:     hsl(0, 0%, 42%)   [Ritual Gray]
+• Text:       hsl(0, 0%, 65%)   [Granite Text]
+• Card:       hsl(0, 0%, 8%)    [Card Background]
+• Button:     hsl(0, 0%, 21%)   [Granite Button]
+• Shadow:     hsl(0, 0%, 76%)   [Button Shadow]
+
+✒️ TYPOGRAPHY
+Font Family: Georgia, serif
+Text Effect: Engraved appearance
+Text Shadow: 0 1px 2px rgba(0, 0, 0, 0.8)
+No glow, pulse, or fancy animations
+
+🧱 BUTTONS & FRAMES
+Radius: 18px (1.125rem)
+Emboss Shadow: 0 1.5px 3px
+Hover: Shadow intensifies to ritual gray
+Active: Inset shadow for lab activation effect
+Background: Granite button color
+No active glow animations
+
+🔍 ICONS
+Application Icon:
+- Stylized SSD vial or black note cube
+- Glow on hover
+- Engraved shadow
+
+Chat Icon (WhatsApp):
+- Circular button, bottom-right corner
+- Expands on hover
+- Shadow intensifies
+- Tooltip: "Encrypted Support"
+- Direct link to WhatsApp: +23777345967
+
+-------------------------------------------------------------------
+4. MENU STRUCTURE
+-------------------------------------------------------------------
+
+Each menu item opens a dedicated route:
+
+┌─────────────────────┬──────────────────────────────────────┐
+│ Menu Item           │ Purpose                              │
+├─────────────────────┼──────────────────────────────────────┤
+│ Home                │ Landing + SSD lab intro              │
+│ Register            │ Secure client onboarding             │
+│ Submit Package      │ Transfer protocol initiation         │
+│ Track Cleansing     │ RTC-based status tracker             │
+│ Crypto Wallet Setup │ Client crypto registration           │
+│ Fiat Transfer Setup │ Bank details registration            │
+│ Support             │ Encrypted chat + inquiry form        │
+└─────────────────────┴──────────────────────────────────────┘
+
+Note: Payout Confirmation page has been REMOVED for security.
+All payout confirmations handled privately via backend alerts.
+
+-------------------------------------------------------------------
+5. MULTILINGUAL SUPPORT
+-------------------------------------------------------------------
+
+Location: Bottom-left corner of screen
+
+Languages Supported:
+- EN (English)
+- CH (Chinese - 中文)
+- IND (Indonesian - Bahasa Indonesia)
+- FR (French - Français)
+
+Functionality:
+✓ Dynamic content translation across all pages
+✓ No page reload required
+✓ Language state persists during session
+✓ Toggle button with active state indication
+
+Implementation:
+- React state management for language switching
+- Translation object structure per language
+- Applies to all pages and components
+
+-------------------------------------------------------------------
+6. WHATSAPP CHAT INTEGRATION
+-------------------------------------------------------------------
+
+Location: Fixed bottom-right corner
+
+Admin Number: +23777345967
+
+Features:
+✓ Circular button design
+✓ Hover expansion effect
+✓ Shadow intensifies on hover
+✓ Tooltip: "Encrypted Support"
+✓ Direct WhatsApp deep link
+✓ Opens in new tab
+
+WhatsApp URL Format:
+https://wa.me/23777345967
+
+-------------------------------------------------------------------
+7. TRACKING PAGE WITH FACILITATION CODE
+-------------------------------------------------------------------
+
+Fields:
+1. RTC Tracking Code
+   - Format: RTC-XXXXXX-XXXX
+   - Sent via encrypted SMS
+
+2. Facilitation Code (NEW)
+   - Format: FC-XXXXXX-XXXX
+   - Secure verification for real-time access
+   - References backend data for status
+
+Backend Integration (Future Implementation):
+✓ Supabase database connection
+✓ Real-time cleansing status updates
+✓ Secure data retrieval via facilitation code
+
+Required Environment Variables (.env):
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-public-key
+VITE_SUPABASE_SERVICE_ROLE_KEY=your-secret-service-role-key
+
+Note: Currently uses mock data. Supabase integration 
+commented in code for future backend activation.
+
+-------------------------------------------------------------------
+8. HERO SECTION 3D BANNER CAROUSEL
+-------------------------------------------------------------------
+
+Location: Home page hero section
+
+Features:
+✓ 3 distinct rotating 3D banner placeholders
+✓ Smooth kinetic transitions (5-second intervals)
+✓ Geometric pattern animations
+✓ Fully responsive and mobile-optimized
+✓ Manual navigation controls (prev/next)
+✓ Progress indicators
+
+Banner Themes:
+1. "SSD Chemical Laboratory" - Sovereign-grade technology
+2. "Black Note Cleansing" - Military-encrypted protocol
+3. "Liquidity Dispatch" - No trace, no return, just results
+
+Design:
+- 3D cube-style placeholders with rotation effects
+- Gradient backgrounds with geometric overlays
+- Engraved text shadows
+- Button-emboss effects on navigation controls
+
+-------------------------------------------------------------------
+9. REMOVED COMPONENTS
+-------------------------------------------------------------------
+
+❌ PAYOUT CONFIRMATION PAGE - DELETED
+
+Reason: Exposes sensitive payout details
+
+Replacement Strategy:
+- All payout confirmations handled via backend
+- Client alerts sent via encrypted SMS only
+- No frontend display of transaction details
+- Route completely removed from application
+- No links or references remain in codebase
+
+-------------------------------------------------------------------
+10. STRICT IMPLEMENTATION RULES
+-------------------------------------------------------------------
+
+🚫 ZERO DEVIATION POLICY:
+✓ Follow ALL specifications exactly as defined
+✓ NO additive colors, icons, or animations
+✓ Header menu remains buttoned (hover + non-hover)
+✓ NO fancy transitions or gradients beyond spec
+✓ NO external branding elements
+✓ ONLY use defined color palette (HSL format)
+✓ Semantic tokens ONLY (no direct color classes)
+
+-------------------------------------------------------------------
+11. TECHNOLOGY STACK
+-------------------------------------------------------------------
+
+Frontend:
+- React 18.3.1
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM 6.30.1
+- Lucide React (icons)
+- Sonner (toast notifications)
+
+Design System:
+- Custom HSL color tokens
+- Georgia serif typography
+- Emboss button utilities
+- Engraved text effects
+
+Future Backend (When Enabled):
+- Supabase (PostgreSQL database)
+- Supabase Auth (encrypted SMS alerts)
+- Supabase Storage (document management)
+- Edge Functions (payment processing)
+
+-------------------------------------------------------------------
+12. IMPACT GUARANTEE
+-------------------------------------------------------------------
+
+This application delivers a "Mike Tyson uppercut" of believability.
+
+Visitor Experience Objectives:
+✓ Immediate captivation upon landing
+✓ 20+ minute average session duration
+✓ Lab-grade aura and sovereign branding
+✓ Encrypted logic conviction
+✓ Zero hesitation, maximum magnetism
+
+This is NOT a UI. It is a CLEANSING INTERFACE.
+Not a website. A DIGITAL LABORATORY.
+
+-------------------------------------------------------------------
+13. FILE STRUCTURE
+-------------------------------------------------------------------
+
+src/
+├── components/
+│   ├── Navigation.tsx          [Site navigation menu]
+│   ├── WhatsAppChat.tsx        [Bottom-right chat button]
+│   ├── ScrollToTop.tsx         [Auto-scroll on route change]
+│   ├── LanguageToggle.tsx      [Bottom-left language selector]
+│   ├── BannerCarousel.tsx      [3D rotating hero banners]
+│   └── ui/                     [Shadcn component library]
+├── pages/
+│   ├── Home.tsx                [Landing page + hero]
+│   ├── Register.tsx            [Client registration form]
+│   ├── Submit.tsx              [Package submission portal]
+│   ├── Track.tsx               [RTC + facilitation code tracker]
+│   ├── Crypto.tsx              [Crypto wallet setup]
+│   ├── Fiat.tsx                [Bank transfer setup]
+│   ├── Support.tsx             [Encrypted support form]
+│   └── NotFound.tsx            [404 error page]
+├── App.tsx                     [Main app router]
+├── index.css                   [Design system tokens]
+└── main.tsx                    [React entry point]
+
+tailwind.config.ts              [Tailwind customization]
+index.html                      [HTML entry + SEO meta]
+
+-------------------------------------------------------------------
+14. DEPLOYMENT CHECKLIST
+-------------------------------------------------------------------
+
+✅ All pages render with correct routes
+✅ Navigation menu functional across all pages
+✅ Scroll-to-top activates on route changes
+✅ WhatsApp chat connects to +23777345967
+✅ Language toggle switches content dynamically
+✅ 3D banner carousel rotates smoothly
+✅ Tracking page accepts RTC + facilitation codes
+✅ Payout page completely removed
+✅ Design system uses only HSL colors
+✅ All typography uses Georgia serif
+✅ Button emboss effects working correctly
+✅ Mobile-responsive across all breakpoints
+✅ Toast notifications functional
+✅ Form validation working on all forms
+
+-------------------------------------------------------------------
+15. FUTURE ENHANCEMENTS
+-------------------------------------------------------------------
+
+When Backend Enabled:
+□ Supabase database integration for package tracking
+□ Real-time SMS alerts via Supabase Auth
+□ Automated RTC code generation
+□ Facilitation code verification against database
+□ Admin dashboard for package management
+□ Payment gateway integration (Stripe/crypto)
+□ Edge functions for secure backend operations
+□ File storage for package documentation
+
+-------------------------------------------------------------------
+
+🧬 END OF SPECIFICATION
+═══════════════════════════════════════════════════════════════
+
+Generated: 2025-11-04
+Version: 1.2 (Additive Adjustments Applied)
+Status: Production-Ready (Frontend Complete)
+
+This specification is MANDATORY and IMMUTABLE.
+No compromise. No dilution. Only impact.
