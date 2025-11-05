@@ -31,30 +31,41 @@ const LanguageToggle = () => {
     : [language];
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex gap-2 bg-card border border-border rounded-lg p-2 button-emboss transition-all duration-300">
-      {visibleLanguages.map((lang) => {
-        const { label, flag } = languageMeta[lang];
-        const isActive = language === lang;
 
-        return (
-          <Button
-            key={lang}
-            onClick={() => (expanded ? handleClick(lang) : setExpanded(true))}
-            variant={isActive ? "default" : "ghost"}
-            className={`flex items-center gap-2 text-sm px-3 py-1 rounded-md transition-all ${
-              isActive ? "button-emboss bg-granite-button text-foreground" : "text-muted-foreground"
-            }`}
-          >
-            <img
-              src={flag}
-              alt={`${label} flag`}
-              className="w-5 h-5 rounded-sm shadow-sm"
-            />
-            <span>{label}</span>
-          </Button>
-        );
-      })}
-    </div>
+    
+   <div
+  className={`fixed bottom-6 left-6 z-50 bg-card border border-border rounded-lg p-2 button-emboss transition-all duration-300 ${
+    expanded ? "flex-row" : "flex-col"
+  } flex gap-2 items-center`}
+>
+  {visibleLanguages.map((lang) => {
+    const { label, flag } = languageMeta[lang];
+    const isActive = language === lang;
+
+    return (
+      <Button
+        key={lang}
+        onClick={() => (expanded ? handleClick(lang) : setExpanded(true))}
+        variant={isActive ? "default" : "ghost"}
+        className={`flex items-center gap-2 text-sm px-3 py-1 rounded-md transition-all ${
+          isActive
+            ? "button-emboss bg-granite-button text-foreground"
+            : "text-muted-foreground"
+        }`}
+      >
+        <img
+          src={flag}
+          alt={`${label} flag`}
+          className="w-5 h-5 rounded-sm shadow-sm"
+        />
+        <span>{label}</span>
+      </Button>
+    );
+  })}
+</div>
+
+
+    
   );
 };
 
