@@ -1,18 +1,39 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Zap, Lock } from "lucide-react";
-import BannerCarousel from "@/components/BannerCarousel";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const heroImages = [
+  "/images/hero1.png",
+  "/images/hero5.png",
+  "/images/hero2.png",
+];
 
 const Home = () => {
   const { t } = useLanguage();
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Rotate every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
-        <BannerCarousel />
-        
+        <div className="mb-12">
+          <img
+            src={heroImages[currentIndex]}
+            alt={`EchoLAB™ Hero ${currentIndex + 1}`}
+            className="rounded-lg shadow-lg object-cover w-full h-[300px] transition-all duration-700 ease-in-out"
+          />
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-engraved">
           {t.home.title}
         </h1>
@@ -42,23 +63,17 @@ const Home = () => {
           <div className="bg-card p-8 rounded-lg border border-border">
             <Shield className="w-12 h-12 mb-4 text-ritual-gray" />
             <h3 className="text-2xl font-bold mb-3 text-engraved">{t.home.feature1Title}</h3>
-            <p className="text-muted-foreground">
-              {t.home.feature1Desc}
-            </p>
+            <p className="text-muted-foreground">{t.home.feature1Desc}</p>
           </div>
           <div className="bg-card p-8 rounded-lg border border-border">
             <Zap className="w-12 h-12 mb-4 text-ritual-gray" />
             <h3 className="text-2xl font-bold mb-3 text-engraved">{t.home.feature2Title}</h3>
-            <p className="text-muted-foreground">
-              {t.home.feature2Desc}
-            </p>
+            <p className="text-muted-foreground">{t.home.feature2Desc}</p>
           </div>
           <div className="bg-card p-8 rounded-lg border border-border">
             <Lock className="w-12 h-12 mb-4 text-ritual-gray" />
             <h3 className="text-2xl font-bold mb-3 text-engraved">{t.home.feature3Title}</h3>
-            <p className="text-muted-foreground">
-              {t.home.feature3Desc}
-            </p>
+            <p className="text-muted-foreground">{t.home.feature3Desc}</p>
           </div>
         </div>
       </section>
